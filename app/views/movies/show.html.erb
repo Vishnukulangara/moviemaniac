@@ -39,7 +39,7 @@
 				<h2 class= "review-title"><%= @movie.movie %></h2>
 				<p>(<%=@movie.year %>)</p>
 				<p><%= @movie.description %></p>
-				<div class="star-rating" ><%= rating_for @movie, 'rating',disable_after_rate: true, enable_half: true, half_show: true %></div>
+
 				
 				<% if @reviews.blank? %>
 					<h4>No reviews just yet, would you like to add the first?</h4>
