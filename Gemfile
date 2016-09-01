@@ -55,6 +55,7 @@ gem 'paperclip', '~> 5.1'
 gem 'ratyrate'
 gem 'searchkick'
 gem 'simple_form'
+
 # gem 'jquery-raty-rails' 
 
 #gem 'letsrate'
