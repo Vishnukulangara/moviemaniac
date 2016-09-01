@@ -1,0 +1,22 @@
+
+
+<% if !user_signed_in? %>
+	<div class = "jumbotron">
+		<h1>Your favorite movies Reviewed</h1>
+		<p>"Troy: You see, Lainie, this is all we need. . .couple of smokes, a cup of coffee. . .and a little bit of conversation. You and me and five bucks."</p>
+		<div align="center">
+			<p><%= link_to "Signin to write a review", new_user_session_path ,class: "btn btn-primary btn-lg" %></p>
+		</div>
+	</div>
+<% end %>
+
+<div class = "row">
+	<% @movies.each do |movie| %>
+		<div class = "col-sm-6 col-md-3">
+			<div class = "thumbnail" style="float=">			
+				<%= link_to (image_tag movie.image.url(:medium), class: "image"), movie %><br/>
+				<%= link_to movie.movie %>
+			</div>
+		</div>
+	<% end %>
+</div>
