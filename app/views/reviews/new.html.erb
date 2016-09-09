@@ -1,13 +1,15 @@
-<h4>New review</h4>
-<%= form_for @review , url: movie_reviews_path(@movie), method: "post" do |f| %>
-	
-	<p>
-		Comment<br/>
-		<%= f.text_area :review %>
-
+<div class="alert  alert-info" style="width:26%; margin-left:38%">
+	<h4>New review</h4>
+	<%= form_for @review , url: movie_reviews_path(@movie), method: "post" do |f| %>
 		
-	</p>
-	<p><%= f.submit %></p>
-<% end %>
-<!-- <p>Please rate the movie once your comment is saved.</p> -->
-<%= link_to "back", movie_path(@movie) %>
+		<p>
+			Comment<br/>
+			<%= f.text_area :review %>
+
+			
+		</p>
+		<p><%= f.submit :class=> "btn btn-primary" %></p>
+	<% end %>
+	<!-- <p>Please rate the movie once your comment is saved.</p> -->
+	<%= link_to "back", movie_path(@movie), class: "btn btn-default" %>
+</div>

@@ -1,5 +1,9 @@
-<h3>
-	Edit movie
-</h3>
-<%= render 'form' %>
-<%= link_to 'Back', movie_path(@movie) %>
+<div class="alert  alert-info" style="width:26%; margin-left:38%">
+	<h3>
+		Edit movie
+	</h3>
+
+	<%= render 'form' %>
+	
+	<%= link_to 'Back', movie_path(@movie) , class: "btn btn-default"%>
+</div>
